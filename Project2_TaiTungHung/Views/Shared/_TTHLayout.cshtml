@@ -1,0 +1,121 @@
+﻿@*
+  Custom layout styled to resemble 
+*@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@(ViewData["Title"] ?? "TTHShop")</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="~/images/logo.png" />
+</head>
+
+<body class="bg-white text-body">
+    <!-- Thanh trên cùng -->
+    <div class="w-100 py-1 bg-dark text-white small">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>TTHShop - Hotline: <a href="tel:02438222228" class="link-light text-decoration-none">02438222228</a></div>
+            <div class="d-none d-md-block">info@TTH.vn</div>
+        </div>
+    </div>
+
+    <!-- Header + Navbar -->
+    <header class="border-bottom">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <!-- Logo thay chữ -->
+                <a class="navbar-brand d-flex align-items-center" asp-controller="TTHHome" asp-action="TTHIndex">
+                    <img src="~/images/logo.png" alt="TTH Bakery Logo" style="height:70px;" class="d-inline-block align-top" />
+                    <span class="ms-2 fw-bold text-uppercase" style="font-size:1.25rem;">TTHShop</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" asp-controller="TTHHome" asp-action="TTHIndex">Trang chủ</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="menuBanh" role="button" data-bs-toggle="dropdown" aria-expanded="false">Bánh ngọt và Bánh mỳ</a>
+                            <ul class="dropdown-menu" aria-labelledby="menuBanh">
+                                <li><a class="dropdown-item" href="#">Bánh sinh nhật</a></li>
+                                <li><a class="dropdown-item" href="#">Bánh mỳ</a></li>
+                                <li><a class="dropdown-item" href="#">Bánh tươi</a></li>
+                                <li><a class="dropdown-item" href="#">Bánh ngọt</a></li>
+                                <li><a class="dropdown-item" href="#">Bánh quy khô</a></li>
+                                <li><a class="dropdown-item" href="#">Chocolate</a></li>
+                                <li><a class="dropdown-item" href="#">Bánh miếng nhỏ</a></li>
+                                <li><a class="dropdown-item" href="#">Bánh trung thu</a></li>
+                                <li><a class="dropdown-item" href="#">Phụ kiện sinh nhật</a></li>
+                                <li><a class="dropdown-item" href="#">Bánh truyền thống</a></li>
+                                <li><a class="dropdown-item" href="#">Bánh đông lạnh</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Tin tức & Khuyến mại</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="menuLienHe" role="button" data-bs-toggle="dropdown" aria-expanded="false">Liên hệ</a>
+                            <ul class="dropdown-menu" aria-labelledby="menuLienHe">
+                                <li><a class="dropdown-item" href="#">TTHShop Hà Nội</a></li>
+                                <li><a class="dropdown-item" href="#">TTHShop Bắc Ninh</a></li>
+                                <li><a class="dropdown-item" href="#">TTHShop Hải Phòng</a></li>
+                                <li><a class="dropdown-item" href="#">TTHShop Ecopark - Hưng Yên</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Tuyển dụng</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Nội dung chính -->
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-5 pt-5 border-top">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-5">
+                    <h5 class="fw-bold">Giới thiệu</h5>
+                    <p class="mb-2">TTHShop - thương hiệu bánh phong cách Pháp với chất lượng tinh tế, tỉ mỉ.</p>
+                    <a class="btn btn-outline-dark btn-sm" href="#">Xem ngay</a>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold">Liên kết</h6>
+                    <ul class="list-unstyled">
+                        <li><a class="link-dark text-decoration-none" asp-controller="TTHHome" asp-action="TTHIndex">Trang chủ</a></li>
+                        <li><a class="link-dark text-decoration-none" href="#">Chính sách bảo mật</a></li>
+                        <li><a class="link-dark text-decoration-none" href="#">Chính sách đổi trả</a></li>
+                        <li><a class="link-dark text-decoration-none" href="#">Tuyển dụng</a></li>
+                        <li><a class="link-dark text-decoration-none" href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold">Thông tin</h6>
+                    <address class="small">
+                        Công ty CP DV TM SX SHT<br />
+                        Số 15, hẻm 76 ngách 51, ngõ Linh Quang, phường Văn Miếu - Quốc Tử Giám, Hà Nội<br />
+                        <a href="tel:02438222228" class="link-dark text-decoration-none">02438222228</a><br />
+                        <a href="mailto:info@TTH.vn" class="link-dark text-decoration-none">info@TTH.vn</a>
+                    </address>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center py-3 border-top mt-4 small text-muted">
+                <span>&copy; 2025 TTHShop</span>
+                <span>Made with ASP.NET Core MVC</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
