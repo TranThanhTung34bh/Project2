@@ -1,0 +1,58 @@
+﻿@model Project2_TaiTungHung.Models.HoaDon
+
+@{
+    ViewData["Title"] = "Thêm hóa đơn";
+}
+
+<h1 class="mb-4">Thêm hóa đơn</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h4 class="card-title mb-3">Thông tin hóa đơn</h4>
+
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                    <div class="mb-3">
+                        <label asp-for="MaHd" class="form-label">Mã hóa đơn</label>
+                        <input asp-for="MaHd" class="form-control" placeholder="Nhập mã hóa đơn" />
+                        <span asp-validation-for="MaHd" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="NgayLap" class="form-label">Ngày lập</label>
+                        <input asp-for="NgayLap" type="date" class="form-control" />
+                        <span asp-validation-for="NgayLap" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="MaKh" class="form-label">Khách hàng</label>
+                        <select asp-for="MaKh" class="form-select" asp-items="ViewBag.MaKh">
+                            <option value="">-- Chọn khách hàng --</option>
+                        </select>
+                        <span asp-validation-for="MaKh" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="MaNv" class="form-label">Nhân viên</label>
+                        <select asp-for="MaNv" class="form-select" asp-items="ViewBag.MaNv">
+                            <option value="">-- Chọn nhân viên --</option>
+                        </select>
+                        <span asp-validation-for="MaNv" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-flex justify-content-between mt-4">
+                        <a asp-action="Index" class="btn btn-secondary">
+                            <i class="bi bi-arrow-left"></i> Quay lại danh sách
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-plus-circle"></i> Thêm mới
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

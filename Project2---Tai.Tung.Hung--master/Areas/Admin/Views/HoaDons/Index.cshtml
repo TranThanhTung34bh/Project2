@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Project2_TaiTungHung.Models.HoaDon>
+
+@{
+    ViewData["Title"] = "Danh sách hóa đơn";
+}
+
+<h1 class="mb-4">@ViewData["Title"]</h1>
+
+<!-- nút thêm mới -->
+<a asp-action="Create" class="btn btn-primary mb-3">
+    + Thêm hóa đơn mới
+</a>
+
+<div class="table-responsive">
+    <table class="table table-bordered mb-0">
+        <thead class="bg-dark text-white">
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.NgayLap)</th>
+                <th>@Html.DisplayNameFor(model => model.MaKhNavigation)</th>
+                <th>@Html.DisplayNameFor(model => model.MaNvNavigation)</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.NgayLap)</td>
+                    <td>@Html.DisplayFor(modelItem => item.MaKhNavigation.MaKh)</td>
+                    <td>@Html.DisplayFor(modelItem => item.MaNvNavigation.MaNv)</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.MaHd" class="btn btn-warning btn-sm">Sửa</a>
+                        <a asp-action="Details" asp-route-id="@item.MaHd" class="btn btn-info btn-sm text-white">Chi tiết</a>
+                        <a asp-action="Delete" asp-route-id="@item.MaHd" class="btn btn-danger btn-sm">Xóa</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<style>
+    /* Table striping */
+    table.table tbody tr:nth-child(odd) {
+        background-color: #f9f9f9;
+    }
+
+    table.table tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* chỉnh nút */
+    .btn-warning {
+        background-color: #f1c40f;
+        border-color: #f1c40f;
+    }
+
+        .btn-warning:hover {
+            background-color: #d4ac0d;
+            border-color: #d4ac0d;
+        }
+
+    .btn-info {
+        background-color: #00bcd4;
+        border-color: #00bcd4;
+    }
+
+        .btn-info:hover {
+            background-color: #00acc1;
+            border-color: #00acc1;
+        }
+</style>

@@ -1,0 +1,279 @@
+﻿@{
+    ViewData["Title"] = "Trang chủ";
+}
+<section class="py-4 border-bottom">
+    <div class="container">
+        <div class="row g-3 g-md-4">
+            <div class="col-12 col-md-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <img class="card-img-top" src="~/images/banh1.png" alt="Bánh sinh nhật">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title mb-2">Bánh sinh nhật</h5>
+                        <a href="@Url.Action("Details", "SanPhams", new { id = 1 })" class="btn btn-dark mt-auto">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <img class="card-img-top" src="~/images/banh17.png" alt="Bánh tươi">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title mb-2">Bánh tươi</h5>
+                        <a href="@Url.Action("Details", "SanPhams", new { id = 2 })" class="btn btn-dark mt-auto">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <img class="card-img-top" src="~/images/banh19.png" alt="Bánh miếng nhỏ">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title mb-2">Bánh miếng nhỏ</h5>
+                        <a href="@Url.Action("Details", "SanPhams", new { id = 3 })" class="btn btn-dark mt-auto">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3 class="mb-0">Sản phẩm mới</h3>
+        </div>
+
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+
+            <div class="col">
+                <div class="card border-0 shadow-sm h-100">
+                    <img class="card-img-top" src="~/images/banh10.png" alt="Bánh mới 1">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title text-center fw-semibold" style="white-space: normal; min-height: 40px;">Bánh cheesecake dâu</h6>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-danger">25,000₫</span>
+                            <a href="@Url.Action("Details", "SanPhams", new { id = 4 })" class="btn btn-sm btn-dark">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card border-0 shadow-sm h-100">
+                    <img class="card-img-top" src="~/images/banh12.png" alt="Bánh mới 2">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title text-center fw-semibold" style="white-space: normal; min-height: 40px;">Bánh tart trái cây</h6>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-danger">30,000₫</span>
+                            <a href="@Url.Action("Details", "SanPhams", new { id = 5 })" class="btn btn-sm btn-dark">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card border-0 shadow-sm h-100">
+                    <img class="card-img-top" src="~/images/banh3.png" alt="Bánh mới 3">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title text-center fw-semibold" style="white-space: normal; min-height: 40px;">Bánh croissant</h6>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-danger">28,000₫</span>
+                            <a href="@Url.Action("Details", "SanPhams", new { id = 6 })" class="btn btn-sm btn-dark">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card border-0 shadow-sm h-100">
+                    <img class="card-img-top" src="~/images/banh4.png" alt="Bánh mới 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title text-center fw-semibold" style="white-space: normal; min-height: 40px;">Bánh su kem</h6>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-danger">35,000₫</span>
+                            <a href="@Url.Action("Details", "SanPhams", new { id = 7 })" class="btn btn-sm btn-dark">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card border-0 shadow-sm h-100">
+                    <img class="card-img-top" src="~/images/banh5.png" alt="Bánh mới 5">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title text-center fw-semibold" style="white-space: normal; min-height: 40px;">Bánh su kem nhỏ</h6>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-danger">22,000₫</span>
+                            <a href="@Url.Action("Details", "SanPhams", new { id = 8 })" class="btn btn-sm btn-dark">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card border-0 shadow-sm h-100">
+                    <img class="card-img-top" src="~/images/banh6.png" alt="Bánh mới 6">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title text-center fw-semibold" style="white-space: normal; min-height: 40px;">Bánh macaron</h6>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-danger">18,000₫</span>
+                            <a href="@Url.Action("Details", "SanPhams", new { id = 9 })" class="btn btn-sm btn-dark">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card border-0 shadow-sm h-100">
+                    <img class="card-img-top" src="~/images/banh7.png" alt="Bánh mới 7">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title text-center fw-semibold" style="white-space: normal; min-height: 40px;">Bánh su kem nhân matcha</h6>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-danger">20,000₫</span>
+                            <a href="@Url.Action("Details", "SanPhams", new { id = 10 })" class="btn btn-sm btn-dark">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card border-0 shadow-sm h-100">
+                    <img class="card-img-top" src="~/images/banh9.png" alt="Bánh mới 8">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title text-center fw-semibold" style="white-space: normal; min-height: 40px;">Bánh mousse xoài</h6>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-danger">32,000₫</span>
+                            <a href="@Url.Action("Details", "SanPhams", new { id = 11 })" class="btn btn-sm btn-dark">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3 class="mb-0">Sản phẩm bán chạy</h3>
+        </div>
+
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+
+            <div class="col">
+                <div class="card border-0 shadow-sm h-100">
+                    <img class="card-img-top" src="~/images/banh14.png" alt="Bánh chạy 1">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title text-center fw-semibold" style="white-space: normal; min-height: 40px;">Bánh kem socola</h6>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-danger">25,000₫</span>
+                            <a href="@Url.Action("Details", "SanPhams", new { id = 12 })" class="btn btn-sm btn-dark">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card border-0 shadow-sm h-100">
+                    <img class="card-img-top" src="~/images/banh15.png" alt="Bánh chạy 2">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title text-center fw-semibold" style="white-space: normal; min-height: 40px;">Bánh tiramisu</h6>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-danger">30,000₫</span>
+                            <a href="@Url.Action("Details", "SanPhams", new { id = 13 })" class="btn btn-sm btn-dark">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card border-0 shadow-sm h-100">
+                    <img class="card-img-top" src="~/images/banh16.png" alt="Bánh chạy 3">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title text-center fw-semibold" style="white-space: normal; min-height: 40px;">Bánh mochi</h6>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-danger">28,000₫</span>
+                            <a href="@Url.Action("Details", "SanPhams", new { id = 14 })" class="btn btn-sm btn-dark">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card border-0 shadow-sm h-100">
+                    <img class="card-img-top" src="~/images/banh17.png" alt="Bánh chạy 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title text-center fw-semibold" style="white-space: normal; min-height: 40px;">Bánh mousse</h6>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-danger">35,000₫</span>
+                            <a href="@Url.Action("Details", "SanPhams", new { id = 15 })" class="btn btn-sm btn-dark">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card border-0 shadow-sm h-100">
+                    <img class="card-img-top" src="~/images/banh18.png" alt="Bánh chạy 5">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title text-center fw-semibold" style="white-space: normal; min-height: 40px;">Bánh su kem</h6>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-danger">22,000₫</span>
+                            <a href="@Url.Action("Details", "SanPhams", new { id = 16 })" class="btn btn-sm btn-dark">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card border-0 shadow-sm h-100">
+                    <img class="card-img-top" src="~/images/banh19.png" alt="Bánh chạy 6">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title text-center fw-semibold" style="white-space: normal; min-height: 40px;">Bánh flan</h6>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-danger">18,000₫</span>
+                            <a href="@Url.Action("Details", "SanPhams", new { id = 17 })" class="btn btn-sm btn-dark">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card border-0 shadow-sm h-100">
+                    <img class="card-img-top" src="~/images/banh20.png" alt="Bánh chạy 7">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title text-center fw-semibold" style="white-space: normal; min-height: 40px;">Bánh quy bơ</h6>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-danger">20,000₫</span>
+                            <a href="@Url.Action("Details", "SanPhams", new { id = 18 })" class="btn btn-sm btn-dark">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card border-0 shadow-sm h-100">
+                    <img class="card-img-top" src="~/images/banh8.png" alt="Bánh chạy 8">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title text-center fw-semibold" style="white-space: normal; min-height: 40px;">Bánh cupcake</h6>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-danger">32,000₫</span>
+                            <a href="@Url.Action("Details", "SanPhams", new { id = 19 })" class="btn btn-sm btn-dark">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-md-6">
+                <h3 class="mb-3">Về chúng tôi</h3>
+                <p>Mỗi chiếc bánh đều được làm 100% hand-made với sự tinh tế và tỉ mỉ.</p>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,56 @@
+﻿@* Layout Admin với Sidebar *@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Admin</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/_TTHLayoutAdmin.css" />
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <nav class="bg-dark text-white p-3" style="width:250px; min-height:100vh;">
+            <div class="text-center mb-4">
+                <img src="~/images/admin-avatar.png" class="rounded-circle mb-2" width="80" height="80" />
+                <h5 class="mb-0">Tên Admin</h5>
+                <small>Quản trị viên</small>
+            </div>
+
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                    <a class="nav-link text-white" asp-area="Admin" asp-controller="Home" asp-action="Index">🏠 Trang chủ</a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link text-white" asp-area="Admin" asp-controller="SanPhams" asp-action="Index">📦 Sản phẩm</a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link text-white" asp-area="Admin" asp-controller="HoaDons" asp-action="Index">🧾 Hóa đơn</a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link text-white" asp-area="Admin" asp-controller="KhachHangs" asp-action="Index">👤 Khách hàng</a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link text-white" asp-area="Admin" asp-controller="Reports" asp-action="Index">📊 Thống kê</a>
+                </li>
+            </ul>
+
+            <hr class="text-white" />
+            <a class="btn btn-outline-light w-100 mb-2" asp-area="" asp-controller="Home" asp-action="Index">Về trang bán hàng</a>
+            <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger w-100">Đăng xuất</button>
+            </form>
+        </nav>
+
+        <!-- Main content -->
+        <div class="flex-fill p-4">
+            @RenderBody()
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

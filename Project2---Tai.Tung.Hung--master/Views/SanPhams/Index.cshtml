@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Project2_TaiTungHung.Models.SanPham>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="mb-4">Danh sách sản phẩm</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">+ Thêm sản phẩm mới</a>
+</p>
+
+<table class="table table-striped table-bordered table-hover align-middle">
+    <thead class="table-dark">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.TenSp)</th>
+            <th>@Html.DisplayNameFor(model => model.DonGia)</th>
+            <th>@Html.DisplayNameFor(model => model.SoLuong)</th>
+            <th>@Html.DisplayNameFor(model => model.MaNccNavigation)</th>
+            <th class="text-center">Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.TenSp</td>
+                <td>@string.Format("{0:N0} ₫", item.DonGia)</td>
+                <td>@item.SoLuong</td>
+                <td>@item.MaNccNavigation.MaNcc</td>
+                <td class="text-center">
+                    <a class="btn btn-sm btn-warning" asp-action="Edit" asp-route-id="@item.MaSp">Sửa</a>
+                    <a class="btn btn-sm btn-info text-white" asp-action="Details" asp-route-id="@item.MaSp">Chi tiết</a>
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@item.MaSp">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

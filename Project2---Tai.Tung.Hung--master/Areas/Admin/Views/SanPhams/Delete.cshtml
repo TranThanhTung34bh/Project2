@@ -1,0 +1,43 @@
+﻿@model Project2_TaiTungHung.Models.SanPham
+
+@{
+    ViewData["Title"] = "Xóa sản phẩm";
+}
+
+<h1 class="mb-4">Xóa sản phẩm</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h4 class="card-title mb-3">Bạn có chắc muốn xóa sản phẩm này?</h4>
+                <dl class="row">
+                    <dt class="col-sm-4">Tên sản phẩm</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.TenSp)</dd>
+
+                    <dt class="col-sm-4">Đơn giá</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.DonGia)</dd>
+
+                    <dt class="col-sm-4">Số lượng</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.SoLuong)</dd>
+
+                    <dt class="col-sm-4">Mã nhà cung cấp</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.MaNccNavigation.MaNcc)</dd>
+                </dl>
+
+                <form asp-action="Delete" class="mt-4">
+                    <input type="hidden" asp-for="MaSp" />
+
+                    <div class="d-flex justify-content-between">
+                        <a asp-action="Index" class="btn btn-secondary">
+                            <i class="bi bi-arrow-left"></i> Quay lại danh sách
+                        </a>
+                        <button type="submit" class="btn btn-danger">
+                            <i class="bi bi-trash"></i> Xóa sản phẩm
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
